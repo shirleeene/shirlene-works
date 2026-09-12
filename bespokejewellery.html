@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bespoke Jewellery Site</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400&family=Syne:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body data-cursor="default">
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-logo">Shirlene<span style="color:var(--accent)">.</span></span>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">Shirlene<span class="logo-dot">.</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link" data-label="Work">Work</a>
+     <!-- <a href="playground.html" class="nav-link" data-label="Playground">Playground</a> -->
+    </div>
+    <div class="nav-meta">
+      <span class="nav-status"><span class="status-dot"></span>Available</span>
+    </div>
+  </nav>
+
+   <!-- Client Hero -->
+<section class="client-hero">
+    <div class="page-navright">
+      <a href="index.html" class="page-nav">02</a>
+      <a href="index.html" class="page-nav">03</a>
+    </div>
+    <div class="client-hero-top">
+      <h1 class="client-name">Bespoke Jewellery Site Redesign</h1>
+      <div class="client-meta">
+        <div class="client-meta-row">
+   <!--     <div class="client-stat">
+           <span class="client-stat-val">2 yrs 3 mths</span>
+            <span class="client-stat-label"></span>
+          </div>
+          <div class="client-stat">
+            <span class="client-stat-val">12</span>
+            <span class="client-stat-label">Platforms</span>
+          </div>
+          <div class="client-stat">
+            <span class="client-stat-val">40+</span>
+            <span class="client-stat-label">Components</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="client-desc-row">
+      <div class="client-tags-wrap">
+        <span class="tag">Design System</span>
+        <span class="tag">UI</span>
+        <span class="tag">Web Design</span>
+        <span class="tag">B2C</span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Project Cards -->
+  <section class="project-list">
+
+    <!-- 01 Design System -->
+    <div class="project-slot" id="bespoke jewellery">
+      <div class="project-visual">
+        <div class="dastill dastill--landscape">
+          <div class="placeholder-inner">
+          </div>
+        </div>
+        <div class="daold daold--landscape">
+          <div class="placeholder-inner">
+          </div>
+        </div>
+        <div class="dainner dainner--landscape">
+          <div class="placeholder-inner">
+          </div>
+        </div>
+        <div class="dasteps dasteps--landscape">
+          <div class="placeholder-inner">
+          </div>
+	      </div>
+
+     	<div class="dacolors dacolors--landscape">
+          <div class="placeholder-inner">
+          </div>
+        </div>
+      </div>
+      <div class="project-info">
+        <h2 class="project-title">Website Redesign</h2>
+        <div class="project-outcomes">
+          <span class="project-outcome mono">A website redesign that aligns with that of a bespoke jewellery store.</span>
+          <span class="project-outcome mono">Requires a split use for its service providers, clients and admins.</span>
+        </div>
+        <p class="project-problem">Problem: The client initially had two different websites already made — one acting as a store but heavy-laden with text and customer education (akin to a blog on diamonds), the other acting as a site appointment bookings.  Their main site had a dated design and had no shop page element to it. It lacked the look and feel that bespoke jewellery had. 
+</p>
+        <p class="ecall-body"> We sought to make a website that was clean and elegant while still carrying out their branding of colours and fonts. Some intentional design changes included: <br> - Focusing on their darker theme colour that would match their Instagram look and feel, which was the main communicating point between themselves and their audience. <br> - Looked at other competitors' shop pages and settled on a shop system that helped customers make step by step choices better suited for their engagement rings.</p> 
+
+      </div>
+    </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <p class="footer-tagline">Up for a <em>chat?</em></p>
+      <a href="mailto:shirlenehly010@gmail.com" class="footer-email">email me here!</a>
+    </div>
+    <div class="footer-right">
+      <div class="footer-links">
+        <a href="www.linkedin.com/in/shirlene-ho" target="_blank" class="footer-link mono">LinkedIn ↗</a>
+        <a href="https://drive.google.com/file/d/1FRg0CxE9V1r8pz8oT7f8C0hHhA85Rcrs/view?usp=sharing" target="_blank" class="footer-link mono">Read.cv ↗</a>
+      </div>
+      <p class="footer-copy mono" style="text-align: right;" style="margin-bottom: 0px;">© 2026 Shirlene Ho</p>
+      <p class="footer-credit" style="margin-top: -10px;">vibe-coded with AI, further spiced with whatever html and css possessed. </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const cards = document.querySelectorAll('.project-card');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    cards.forEach(c => cardObserver.observe(c));
+  </script>
+</body>
+</html>
