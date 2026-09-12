@@ -127,13 +127,13 @@ img { display: block; max-width: 100%; }
      gap: 20px;
      width: 100%;
      align-items: stretch;
-}
+    }
 
-.project-row > div {
-  flex: 1;
-  width: 100%;
-  min-height: 50px; /* Adjust height to fit your desired card height */
-}
+    .project-row > div {
+    flex: 1;
+    width: 100%;
+    min-height: 50px; /* Adjust height to fit your desired card height */
+    }
 
     .project-frame {
       background: var(--surface);
@@ -147,12 +147,13 @@ img { display: block; max-width: 100%; }
     .project-frame--portrait { aspect-ratio: 3/4; }
     .project-frame--wide { aspect-ratio: 16/7; }
 
-    .project-info { display: flex;
+    .project-info { 
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 16px;
-    padding: 8px 0;
-}
+    gap: 10px;
+    padding: 0px 0;
+    }
     .project-num { font-family: var(--mono); font-size: 0.7rem; color: var(--fg-faint); }
     .project-discipline { font-family: var(--mono); font-size: 0.7rem; color: var(--accent-dark); display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
     .project-discipline::before { content: ''; width: 20px; height: 1px; background: var(--accent-dark); display: block; }
@@ -1004,6 +1005,15 @@ body.cursor-hover .cursor-dot { opacity: 0; }
   transition: background-size 0.4s ease; /* Adds a smooth transition effect */
 }
 
+.project-esfbuserflow{
+  background-image: url("images/eSFBuserfbflow.jpg");
+  aspect-ratio: 16 / 9; 
+  background-size: 88%;      /* Scales the image to completely cover the div */
+  background-position: center;  /* Centers the image within the container */
+  background-repeat: no-repeat; 
+  transition: background-size 0.4s ease; /* Adds a smooth transition effect */
+}
+
 .project-outcome {
   max-width: 800px;
   font-size: 0.7rem;
@@ -1044,6 +1054,7 @@ body.cursor-hover .cursor-dot { opacity: 0; }
 .project-info{
   display: flex;
   max-width: 1200px;
+  align-content: flex-start;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
