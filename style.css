@@ -64,23 +64,19 @@ img { display: block; max-width: 100%; }
     .client-stat { display: flex; flex-direction: column; align-items: flex-end; }
     .client-stat-val { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; letter-spacing: -0.02em; }
     .client-stat-label { font-family: var(--mono); font-size: 0.65rem; color: var(--fg-faint); }
-    .client-desc-row { display: grid; align-self: left; grid-template-columns: 0.6fr 1.2fr; gap: 80px; align-items: start; }
+    .client-desc-row { display: grid; align-self: left; grid-template-columns: 0.6fr 0.5fr; gap: 80px; align-items: start; margin:auto;}
     .client-desc { font-size: 0.95rem; line-height: 1.7; color: var(--fg-muted); }
     .client-tags-wrap { display: flex; gap: 8px; flex-wrap: wrap; flex-direction: row;  justify-content: flex-start; max-width:500px; }
 
     .project-list { padding: 0 32px 120px; }
 
-    .project-card {
-      display: grid;
-      grid-template-columns: 1.6fr 1.8fr;
-      gap: 64px;
-      align-items: center;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
-    }
+.project-card {
+  display: grid;
+  grid-template-columns: 1.6fr 1.8fr;
+  gap: 64px;
+  align-items: start;
+  padding: 20px 0;
+}
 
     .project-slot {
      display: grid;
@@ -147,23 +143,17 @@ img { display: block; max-width: 100%; }
     .project-frame--portrait { aspect-ratio: 3/4; }
     .project-frame--wide { aspect-ratio: 16/7; }
 
-    .project-info { 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 0px 0;
-    }
     .project-num { font-family: var(--mono); font-size: 0.7rem; color: var(--fg-faint); }
     .project-discipline { font-family: var(--mono); font-size: 0.7rem; color: var(--accent-dark); display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
     .project-discipline::before { content: ''; width: 20px; height: 1px; background: var(--accent-dark); display: block; }
-    .project-title { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.8rem); font-weight: 400; letter-spacing: -0.02em; line-height: 1.1; padding-top:30px;}
+    .project-title { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.8rem); font-weight: 400; letter-spacing: -0.02em; line-height: 1.1; padding-top:5px;}
     .project-body { font-size: 0.875rem; line-height: 1.7; color: var(--fg-muted); max-width: 380px; }
     .project-outcomes { display: flex; flex-direction: column; gap: 8px; padding-top: 8px; border-top: 1px solid var(--border); }
     .project-outcome { display: flex; gap: 10px; font-size: 0.8rem; color: var(--fg-muted); align-items: baseline; }
     .project-outcome::before { content: '—'; font-family: var(--mono); color: var(--fg-faint); flex-shrink: 0; }
     .project-view-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.72rem; color: var(--fg); border-bottom: 1px solid var(--border); padding-bottom: 2px; width: fit-content; transition: gap 0.2s ease, border-color 0.2s ease; margin-top: 8px; }
     .project-view-link:hover { gap: 14px; border-color: var(--fg); }
+    .graphics-title {font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.8rem); font-weight: 400; letter-spacing: -0.02em; line-height: 1.1; padding: top 30px;}
 
     .back-nav { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.72rem; color: var(--fg-muted); margin-bottom: 32px; transition: color 0.2s ease, gap 0.2s ease; }
     .back-nav:hover { color: var(--fg); gap: 12px; }
@@ -1051,15 +1041,16 @@ body.cursor-hover .cursor-dot { opacity: 0; }
   transition: background-size 0.4s ease; /* Adds a smooth transition effect */
 }
 
-.project-info{
+.project-info {
   display: flex;
-  max-width: 1200px;
-  align-content: flex-start;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 20px;
+  max-width: 1200px;
+
   position: sticky;
   top: calc(var(--nav-h) + 32px);
+  align-self: start;
 }
 
 
